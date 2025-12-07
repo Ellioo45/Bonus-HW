@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>QR Code Generator - Bonus HW</title>
+  <link rel="stylesheet" href="/assets/style.css" />
+  <!-- QRious for QR code generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+</head>
+<body>
+  <main class="container">
+    <h1>QR Code Generator</h1>
+
+    <form id="qr-form" onsubmit="return false;" aria-labelledby="title">
+      <label for="text-input">Enter text or URL</label>
+      <input id="text-input" name="text" type="text" placeholder="https://example.com" aria-label="Text or URL input" />
+
+      <div class="controls">
+        <button id="generate-btn" type="button">Generate</button>
+        <!-- download is an anchor so we can use the download attribute -->
+        <a id="download-link" class="download disabled" aria-disabled="true">Download PNG</a>
+      </div>
+
+      <div class="preview">
+        <canvas id="qr-canvas" width="256" height="256" aria-label="QR code preview"></canvas>
+      </div>
+
+      <p class="hint">Type or paste any text/URL and press Generate (or Enter).</p>
+    </form>
+
+    <footer>
+      <p>Served as a static page in the repository root so GitHub Pages can serve it with the default static workflow.</p>
+    </footer>
+  </main>
+
+  <script src="/assets/script.js"></script>
+</body>
+</html>
